@@ -16,6 +16,7 @@ def extras_tab():
             out_text1 = gr.Textbox(show_label=False)
             btn_run = gr.Button("run command")
             btn_run.click(runcc, inputs=command, outputs=out_text1)
+            files_to_process = gr.Files(label='File(s) to process', file_count="multiple", file_types=["image", "video"])
         # with gr.Row(variant='panel'):
         #     with gr.Accordion(label="Post process", open=False):
         #         with gr.Column():
