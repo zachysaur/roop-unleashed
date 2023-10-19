@@ -3,11 +3,19 @@ import gradio as gr
 import roop.utilities as util
 import roop.util_ffmpeg as ffmpeg
 import roop.globals
+from subprocess import getoutput
+
+def runcc(command):
+    out = getoutput(f"{command}")
+    return out
 
 def extras_tab():
     with gr.Tab("🎉 Extras"):
         with gr.Row():
-            files_to_process = gr.Files(label='File(s) to process', file_count="multiple", file_types=["image", "video"])
+            command = gr.Textbox(show_label=False, max_lines=1, placeholder="command")
+            out_text1 = gr.Textbox(show_label=False)
+            btn_run = gr.Button("run command")
+            btn_run.click(runcc, inputs=command, outputs=out_text1)
         # with gr.Row(variant='panel'):
         #     with gr.Accordion(label="Post process", open=False):
         #         with gr.Column():
