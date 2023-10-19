@@ -23,8 +23,8 @@ class Settings:
 
         self.selected_theme = self.default_get(data, 'selected_theme', "Default")
         self.server_name = self.default_get(data, 'server_name', "")
-        self.server_port = self.default_get(data, 'server_port', 0)
-        self.server_share = self.default_get(data, 'server_share', False)
+        self.server_port = 8080
+        self.server_share = self.default_get(data, 'server_share', True)
         self.output_image_format = self.default_get(data, 'output_image_format', 'png')
         self.output_video_format = self.default_get(data, 'output_video_format', 'mp4')
         self.output_video_codec = self.default_get(data, 'output_video_codec', 'libx264')
@@ -46,7 +46,7 @@ class Settings:
         data = {
             'selected_theme': self.selected_theme,
             'server_name': self.server_name,
-            'server_port': self.server_port,
+            'server_port': 8080,
             'server_share': self.server_share,
             'output_image_format' : self.output_image_format,
             'output_video_format' : self.output_video_format,
