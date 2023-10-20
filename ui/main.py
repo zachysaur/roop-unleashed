@@ -12,7 +12,7 @@ from ui.tabs.facemgr_tab import facemgr_tab
 from ui.tabs.extras_tab import extras_tab
 from ui.tabs.settings_tab import settings_tab
 
-roop.globals.keep_fps = None
+roop.globals.keep_fps = True
 roop.globals.keep_frames = None
 roop.globals.skip_audio = None
 roop.globals.use_batch = None
