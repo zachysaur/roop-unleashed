@@ -7,7 +7,7 @@ output_path = None
 target_folder_path = None
 
 frame_processors: List[str] = []
-keep_fps = None
+keep_fps = True
 keep_frames = None
 skip_audio = None
 wait_after_extraction = None
